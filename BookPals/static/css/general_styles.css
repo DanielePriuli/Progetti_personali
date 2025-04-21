@@ -1,0 +1,293 @@
+/*GLOBAL*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-color: #f0efef;
+    overflow-x: hidden;
+}
+header, footer, #menu-div, #search-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #08044f;
+}
+
+/*HEADER*/
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+}
+header, #menu-div {
+    height: 50px;
+}
+#menu-div, #search-form, #user-div {
+    width: 33vw;
+    height: 50px;
+    z-index: 3;
+}
+#menu-div {
+    justify-content: flex-start;
+}
+#menu-butt {
+    all: unset;
+    position: relative;
+    left: 1px;
+    margin-left: 4px;
+    width: 30px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+#bookpals-logo {
+    position: relative;
+    left: 0px;
+    width: 60px;
+    cursor: pointer;
+}
+.arizonia-regular {
+    margin-top: 7px;
+    margin-right: 3vw;
+    font-family: "Arizonia", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    cursor: pointer;
+}
+#search-form {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#search-field {
+    border-width: 0px 0px 1px;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 20vw;
+    background-color: #08044f;
+    text-align: center;
+    color: white;
+}
+#search-field:focus {
+    outline: 0px;
+}
+#search-butt {
+    all: unset;
+    color: white;
+    cursor: pointer;
+}
+#adv-search {
+    all: unset;
+    position: relative;
+    right: -50px;
+    margin-left: 0.3em;
+    color: white;
+    cursor: pointer;
+    z-index: 4;
+}
+#adv-search-div {
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 10px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #08044f;
+    color: white;
+    visibility: hidden;
+    transition: top 0.5s;
+}
+#rating-select, .year-filter {
+    border-width: 0px 0px 1px;
+    background-color: #08044f;
+    color: white;
+}
+.year-filter {
+    width: 80px;
+    text-align: center;
+}
+.year-filter:first-of-type {
+    margin-left: 30px;
+}
+.adv-form {
+    cursor: pointer;
+}
+nav {
+    width: 100vw;
+    height: 50px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #08044f;
+    visibility: visible;
+    z-index: 2;
+    transition: top 0.5s;
+    isolation: isolate;
+}
+#nav-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    list-style: none;
+}
+.nav-option {
+    all: unset;
+    width: 16vw;
+    height: 50px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+#user-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+#user-div a {
+    background-color: #08044f;
+    color: white;
+    width: 25%;
+    text-align: center;
+}
+#user-butt {
+    all: unset;
+    position: relative;
+    right: 0.5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#user-butt:hover {
+    outline: 2px solid white;
+}
+#user-butt > img {
+    width: 47px;
+    height: 40px;
+}
+#login-form-div {
+    position: absolute;
+    right: 0px;
+    top: 50px;
+    width: 300px;
+    height: 200px;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 5%;
+    background-color: #08044f;
+    color: white;
+    visibility: hidden;
+}
+#login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    height: 60%;
+}
+#login-user-buttons {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+#login-user-buttons button {
+    all: unset;
+    width: fit-content;
+    cursor: pointer;
+}
+#login-form>label>i {
+    position: absolute;
+    right: 20px;
+    color: black;
+    cursor: pointer;
+}
+/*MAIN*/
+main {
+    z-index: -2;
+}
+.carousel-control {
+    background-image: none;
+    font-size: 2em;
+    color: black;
+}
+.carousel-control-prev {
+    margin-left: -60px;
+}
+.carousel-control-next {
+    margin-right: -60px;
+}
+.switch-carousel {
+    background-color: black !important;
+}
+.carousel-inner {
+    height: 260px;
+}
+.card-container {
+    display: flex;
+    margin-bottom: 40px;
+}
+.carousel-item {
+    margin: 0px 50px 0px;
+}
+.card {
+    margin: 10px 5px 0px;
+    width: 100px;
+    z-index: -5;
+}
+.card-img-top {
+    width: 100px;
+    height: 150px;
+}
+
+/*FOOTER*/
+footer {
+    height: 70px;
+}
+
+/*ANIMAZIONI*/
+.nav-option:hover {
+    background-color: #9a95f8;
+}
+.show {
+    top: 50px;
+    visibility: visible;
+}
+#adv-search-div.show {
+    top: 50px;
+    visibility: visible;
+}
+#login-form-div.show {
+    visibility: visible;
+}
+
+/*RESPONSIVE*/
+/*mobile*/@media screen and (max-width: 590px) {
+    .arizonia-regular {
+        display: none;
+    }
+}
