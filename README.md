@@ -1,2 +1,2 @@
-# Progetti_personali
-Repository dove carico miei progetti personali che trovo utili e interessanti
+# Progetti_personali - Only Front-End
+Qui caricherò i miei progetti personali in cui gestisco unicamente il lato Front End. Per la maggior parte saranno progetti sviluppati unicamente in HTML, CSS e JS (senza utilizzo di Framework). Non appena avrò studiato e testato i vari framework, principalmente Angular e React, caricherò progetti anche per questi. In ogni caso, per ogni progetto, dichiarerò in un file i linguaggi ed eventuali framework usati.
