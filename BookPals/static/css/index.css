@@ -1,0 +1,93 @@
+/*MAIN*/
+.new-books.desktop {
+    width: fit-content;
+}
+.carousel {
+    width: 97.50vw;
+    margin-top: 0px;
+}
+.carousel-inner {
+    margin: 0px 30px 0px;
+    width: 85vw;
+}
+.carousel-item {
+    width: 85vw;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    position: relative;
+    left: 45px;
+}
+.carousel-item img {
+    width: 90px;
+    height: 135px;
+}
+.carousel-control-prev {
+    margin-left: 0vw;
+    width: fit-content;
+}
+.carousel-control-next {
+    margin-right: 0vw;
+    width: fit-content;
+}
+#user-feed {
+    margin-bottom: 30px;
+}
+.user-logo {
+    border-radius: 50%;
+    margin: 10px;
+    width: 80px;
+}
+#username {
+    font-weight: bold;
+    color: black;
+}
+.book-details {
+    margin: 0px 20px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.book-details * {
+    margin-right: 20px;
+}
+.book-details h6 {
+    font-weight: normal;
+}
+.book-cover {
+    border-radius: 5%;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+/*RESPONSIVE*/
+/*mobile*/@media screen and (max-width: 590px) {
+    /*MAIN*/
+    .desktop {
+        display: none;
+    }
+    .new-books {
+        width: 86vw;
+        margin: -30px 3px -30px;
+    }
+    .carousel-inner {
+        width: 90vw;
+    }
+    .new-books a {
+        margin: 0px 5px 0px;
+        border-radius: 50%;
+    }
+    .new-books img {
+        margin: 20px 0px 0px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        outline: 4px solid rgb(0, 10, 188);
+        outline-offset: 2px;
+    }
+    #book-details {
+        justify-content: flex-start;
+    }
+    /*ANIMAZIONI*/
+    .new-books img:hover {
+        outline-color: rgb(5, 241, 166);
+    }
+}

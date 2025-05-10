@@ -1,0 +1,50 @@
+/*MAIN*/
+main {
+    display: flex;
+    justify-content: center;
+}
+table {
+    margin: 40px 10px 40px;
+    width: 90vw;
+    height: 100vw;
+    text-align: center;
+}
+th {
+    text-align: center;
+    font-size: 1.5em;
+}
+tr td{
+    padding: 20px;
+    text-align: center;
+}
+td>button {
+    all: unset;
+    width: 5vw;
+    border-radius: 15%;
+    background-color: rgb(0, 179, 255);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+#choose-psw{
+    margin-right: -1em;
+}
+#choose-psw+i {
+    position: relative;
+    right: 10px;
+    cursor: pointer;
+}
+#choose-userImg+button {
+    all: unset;
+    width: 25vw;
+    border-radius: 5%;
+    background-color: rgb(0, 179, 255);
+    color: white;
+    cursor: pointer;
+}
+input[type="color"] {
+    cursor: pointer;
+}
+tr:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.135);
+}
