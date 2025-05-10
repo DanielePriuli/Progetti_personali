@@ -6,7 +6,7 @@ var userIcon=document.getElementById("user-butt");
 var loginForm=document.getElementById("login-form-div");
 var pswShow=document.querySelectorAll("#login-form label")[1].childNodes[1];
 var pswShow=document.querySelectorAll("#login-form label")[1].childNodes[3];
-undefined
+
 var pswInput=document.querySelectorAll("#login-form label")[1].childNodes[1];
 undefined
 function showPsw() {
@@ -32,4 +32,3 @@ hambMenu.addEventListener("click", showNav);
 document.getElementById("adv-search").addEventListener("click", showAdvSrc);
 userIcon.addEventListener("click", showLoginForm);
 pswShow.addEventListener("click", showPsw);
-
