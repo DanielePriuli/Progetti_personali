@@ -1,12 +1,132 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width initial-scale=1">
-        <meta base="www.sitodiprova.com">
-        <title>Prova</title>
-    </head>
-    <body>
-        <p>Provo diversi tag</p>
-    </body>
+<html lang="en">
+<head>
+    <title>BookPals</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/general_styles.css">
+    <link rel="stylesheet" href="../static/css/settings.css">
+</head>
+<body>
+    <header>
+        <div id="menu-div">
+            <button id="menu-butt"><i class="bi bi-list"></i></button>
+            <img id="bookpals-logo" src="../static/images/bookpals-logo.png">
+            <h1 class="arizonia-regular desktop">BookPals</h1>
+        </div>
+        <form id="search-form">
+            <input type="search" id="search-field" placeholder="Type to search">
+            <button id="search-butt"><i class="bi bi-search"></i></button>
+        </form>
+        <button id="adv-search"><i class="bi bi-chevron-down"></i></button> 
+        <div id="user-div">
+            <button id="user-butt"><img  src="../static/images/user-logo.png"></button>
+        </div>
+        <div id="login-form-div">
+            <strong>User</strong>
+            <form id="login-form">
+                <label for="username">Username:&nbsp;
+                    <input type="text" name="username">
+                </label>
+                <label for="password">Password:&nbsp;
+                    <input type="password" name="password">
+                    <i class="bi bi-eye-fill bi-eye"></i>
+                </label>
+            </form>
+            <div id="login-user-buttons">
+                <button type="submit" id="login-butt"><i class="bi bi-box-arrow-in-right"></i><span>&nbsp;Login</span></button>
+                <button id="user-settings-butt"><i class="bi bi-gear-fill"></i><span>&nbsp;Profile Settings</span></button>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <menu id="nav-menu">
+            <li><button class="nav-option"><i class="bi bi-house"></i></button></li>
+            <li><button class="nav-option"><i class="bi bi-bookmark"></i></button></li>
+            <li><button class="nav-option"><i class="bi bi-chat-dots"></i></button></li>
+            <li><button class="nav-option"><i class="bi bi-people"></i></button></li>
+            <li><button class="nav-option"><i class="bi bi-bell"></i></button></li>
+            <li><button class="nav-option"><i class="bi bi-gear"></i></button></li>
+        </menu>
+    </nav>
+    <main>
+        <div id="adv-search-div" class="">
+            Search by: &nbsp;
+            <label for=""><input type="radio" name="search-by" value="title" class="adv-form" form="search-form">&nbsp;Title</label>
+            <label for=""><input type="radio" name="search-by" value="author" class="adv-form" form="search-form">&nbsp;Author</label>
+            <label for=""><input type="radio" name="search-by" value="publisher" class="adv-form" form="search-form">&nbsp;Publisher</label>
+            <select id="rating-select" class="adv-form" form="search-form">
+                <option value="default">Choose rating</option>
+                <option value="1">⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+            </select>
+            <label>
+                From year:&nbsp;
+                <input class="year-filter adv-form" type="number" name="from-year" form="search-form">
+            </label>
+            <label>
+                Until year:&nbsp;
+                <input class="year-filter adv-form" type="number" name="until-year" form="search-form">
+            </label>
+        </div>
+        <table>
+            <thead>
+                <th colspan="3">Settings</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label>Change Username</label></td>
+                    <td><input type="text" id="choose-username"></td>
+                    <td><button class="settings-butt"><i class="bi bi-pencil-fill"></i></button></td>
+                </tr>
+                <tr>
+                    <td><label>Change Password</label></td>
+                    <td><input type="password" id="choose-psw"><i class="bi bi-eye-fill bi-eye"></i></td>
+                    <td><button class="settings-butt"><i class="bi bi-pencil-fill"></i></button></td>
+                </tr>
+                <tr>
+                    <td><label>User Icon</label></td>
+                    <td><input type="file" accept=".jpg, .png, .svg, .jpeg" id="choose-userImg" style="display: none;"><button>Select profile image</button></td>
+                    <td><button class="settings-butt"><i class="bi bi-pencil-fill"></i></button></td>
+                </tr>
+                <tr>
+                    <td><label>Choose Main Color</label></td>
+                    <td><input type="color" value="#08044f" id="choose-colorTheme"></td>
+                    <td><button class="settings-butt"><i class="bi bi-pencil-fill"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <div>
+            <h5>Contatti</h5>
+            Telefono:&nbsp;+39 3493397444<br>
+            Email: bookpalsupport@gmail.com<br>
+            Uffici: Via Vattelapesca 32 (MI)
+        </div>
+        <div>
+            <h5>Canali Social</h5>
+            <a href=""><i class="bi bi-facebook"></i>BookPals<br></a>
+            <a href=""><i class="bi bi-instagram"></i>@bookpals_official<br></a>
+            <a href=""><i class="bi bi-youtube"></i>BookPalsChannel</a>  
+        </div>
+        <div>
+            <h5>Altri link</h5>
+            <a href="">About Us<br></a>
+            <a href="">Join Us<br></a>
+            <a href="">FAQ</a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
+    <script src="../static/js/general_fx.js"></script>
+    <script src="../static/js/settings.js"></script>
+</body>
 </html>
