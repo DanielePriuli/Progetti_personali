@@ -6,6 +6,7 @@
 }
 body {
     background-color: #f0efef;
+    overflow-x: hidden;
 }
 header, footer, #menu-div, #search-form {
     display: flex;
