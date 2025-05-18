@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../static/css/general_styles.css">
-    <link rel="stylesheet" href="../static/css/home.css">
+    <link rel="stylesheet" href="../static/css/myChats.css">
 </head>
 <body>
     <header>
@@ -31,10 +31,10 @@
             <strong>User</strong>
             <form id="login-form">
                 <label for="username">Username:&nbsp;
-                    <input type="text" name="username">
+                    <input type="text" id="username">
                 </label>
                 <label for="password">Password:&nbsp;
-                    <input type="password" name="password">
+                    <input type="password" id="password">
                     <i class="bi bi-eye-fill bi-eye"></i>
                 </label>
             </form>
@@ -57,9 +57,9 @@
     <main>
         <div id="adv-search-div" class="">
             Search by: &nbsp;
-            <label for=""><input type="radio" name="search-by" value="title" class="adv-form" form="search-form">&nbsp;Title</label>
-            <label for=""><input type="radio" name="search-by" value="author" class="adv-form" form="search-form">&nbsp;Author</label>
-            <label for=""><input type="radio" name="search-by" value="publisher" class="adv-form" form="search-form">&nbsp;Publisher</label>
+            <label for="title"><input id="title" type="radio" name="search-by" value="title" class="adv-form" form="search-form">&nbsp;Title</label>
+            <label for="author"><input id="author" type="radio" name="search-by" value="author" class="adv-form" form="search-form">&nbsp;Author</label>
+            <label for="publisher"><input id="publisher" type="radio" name="search-by" value="publisher" class="adv-form" form="search-form">&nbsp;Publisher</label>
             <select id="rating-select" class="adv-form" form="search-form">
                 <option value="default">Choose rating</option>
                 <option value="1">⭐</option>
@@ -77,211 +77,54 @@
                 <input class="year-filter adv-form" type="number" name="until-year" form="search-form">
             </label>
         </div>
-        <section id="new-books">
-            <div id="carouselExampleIndicators" class="carousel slide">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active switch-carousel" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class="switch-carousel"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" class="switch-carousel"></button>
+        <h1>CHATS</h1><hr>
+        <section>
+            <div class="chat">
+                <a href="#"><img class="user-logo" src="https://picsum.photos/100"></a>
+                <div><h3>Username1</h3><p>Testo del messaggio</p></div>
+                <div class="chat-butt del-opt">
+                    <button><i class="bi bi-trash desktop"></i></button>
+                    <button><i class="bi bi-three-dots"></i></button>
                 </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="card-container">
-                            <div class="card">
-                                <img src="../static/images/book-cover-sample.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title</h5>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="../static/images/book-cover-sample.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title</h5>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="../static/images/book-cover-sample.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title</h5>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="../static/images/book-cover-sample.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title</h5>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="../static/images/book-cover-sample.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title</h5>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="../static/images/book-cover-sample.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title</h5>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="../static/images/book-cover-sample.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title</h5>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="../static/images/book-cover-sample.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card-container">
-                            <div class="card">
-                                <img src="../static/images/book-cover-sample 2.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title</h5>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="../static/images/book-cover-sample 2.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title</h5>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="../static/images/book-cover-sample 2.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title</h5>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="../static/images/book-cover-sample 2.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title</h5>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="../static/images/book-cover-sample 2.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title</h5>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="../static/images/book-cover-sample 2.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card-container">
-                            <div class="card">
-                                <img src="../static/images/book-cover-sample 3.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title</h5>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="../static/images/book-cover-sample 3.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title</h5>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="../static/images/book-cover-sample 3.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title</h5>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="../static/images/book-cover-sample 3.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title</h5>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="../static/images/book-cover-sample 3.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title</h5>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="../static/images/book-cover-sample 3.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title</h5>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="../static/images/book-cover-sample 3.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title</h5>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
+                <hr>
+            </div>
+            <div class="chat">
+                <a href="#"><img class="user-logo" src="https://picsum.photos/100"></a>
+                <div><h3>Username1</h3><p>Testo del messaggio</p></div>
+                <div class="chat-butt del-opt">
+                    <button><i class="bi bi-trash desktop"></i></button>
+                    <button><i class="bi bi-three-dots"></i></button>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span class="carousel-control" aria-hidden="true"><i class="bi bi-chevron-compact-left"></i></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <span class="carousel-control" aria-hidden="true"><i class="bi bi-chevron-compact-right"></i></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <hr>
+            </div>
+            <div class="chat">
+                <a href="#"><img class="user-logo" src="https://picsum.photos/100"></a>
+                <div><h3>Username1</h3><p>Testo del messaggio</p></div>
+                <div class="chat-butt del-opt">
+                    <button><i class="bi bi-trash desktop"></i></button>
+                    <button><i class="bi bi-three-dots"></i></button>
+                </div>
+                <hr>
+            </div>
+            <div class="chat">
+                <a href="#"><img class="user-logo" src="https://picsum.photos/100"></a>
+                <div><h3>Username1</h3><p>Testo del messaggio</p></div>
+                <div class="chat-butt del-opt">
+                    <button><i class="bi bi-trash desktop"></i></button>
+                    <button><i class="bi bi-three-dots"></i></button>
+                </div>
+                <hr>
+            </div>
+            <div class="chat">
+                <a href="#"><img class="user-logo" src="https://picsum.photos/100"></a>
+                <div><h3>Username1</h3><p>Testo del messaggio</p></div>
+                <div class="chat-butt del-opt">
+                    <button><i class="bi bi-trash desktop"></i></button>
+                    <button><i class="bi bi-three-dots"></i></button>
+                </div>
+                <hr>
             </div>
         </section>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis ipsam recusandae provident 
-            consequuntur omnis, nisi officia beatae at 
-            itaque natus nulla, nam atque molestias optio eum dicta inventore quisquam voluptates.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quae, saepe, voluptatum 
-            rerum laboriosam doloremque ullam nihil alias praesentium labore beatae veritatis, sint 
-            aliquam similique tenetur nam sapiente. Saepe, eum.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi veritatis nam tenetur 
-            voluptate magnam rem dicta eos. Reiciendis, eum saepe quo porro eos ratione odio 
-            dignissimos repellendus atque. Voluptatum, ipsum?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugiat ea fuga temporibus perferendis 
-            sunt? Cum dicta adipisci eveniet odio, sint rerum suscipit, saepe est iusto, sapiente reprehenderit 
-            itaque beatae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sapiente minus quos
-            expedita accusantium, voluptatum necessitatibus aliquid fugiat maiores dolor nihil tempora
-            perferendis incidunt doloribus vitae! Quam, excepturi odio. Temporibus.
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit aliquid praesentium 
-            exercitationem ullam, consequuntur sed! Dolorem dolorum, temporibus nihil dolor 
-            dignissimos repellat cupiditate sapiente consequatur minus ut error! Fugiat, suscipit?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus harum quibusdam, 
-            voluptatibus voluptas veritatis quae. Itaque fugit, ea, animi, facilis blanditiis sed fuga 
-            aliquam totam id porro quas aut voluptate?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quod omnis illum magnam earum, 
-            possimus quidem, deleniti dolor, placeat quo distinctio exercitationem aspernatur voluptates nemo 
-            animi. Voluptas blanditiis perferendis voluptate. Lorem, ipsum dolor 
-            sit amet consectetur adipisicing elit. Dolorem iste obcaecati rerum 
-            est magni ex molestiae alias quaerat vel praesentium, laudantium 
-            minima illo iure tenetur atque enim consectetur illum. Totam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe 
-            consequuntur, ex neque asperiores similique unde sint maxime dolor 
-            quasi, delectus mollitia, rerum animi itaque laboriosam reprehenderit.
-            Unde at quasi dolor. Lorem ipsum dolor sit amet consectetur 
-            adipisicing elit. Adipisci quis hic eaque iure nostrum odio quos? 
-            Nihil atque debitis, maiores doloremque, officiis quae possimus 
-            blanditiis enim ullam voluptatem reprehenderit minima!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla qui 
-            sapiente distinctio laborum enim eum quis quam facere, nisi nostrum 
-            voluptatibus est magni at inventore officiis? Sint ab animi illo.
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam 
-            voluptatibus culpa assumenda omnis aperiam nemo temporibus sapiente!
-            Veritatis culpa non itaque natus enim qui ut et! Nulla voluptatibus
-            ab dicta? Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Aliquid at quasi sapiente, corporis ipsam porro iste odio dicta, 
-            repellendus eum commodi amet fuga. Doloribus itaque corrupti illo 
-            saepe rerum quam. Lorem ipsum dolor sit amet consectetur adipisicing 
-            elit. Temporibus sint facere doloribus vitae sapiente, molestiae vero
-            corporis voluptate nemo labore voluptas assumenda doloremque 
-            deleniti asperiores enim aspernatur cumque fuga? Eveniet.
-        </p>
     </main>
     <footer>
         <div>
