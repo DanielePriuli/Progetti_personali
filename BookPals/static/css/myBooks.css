@@ -1,0 +1,113 @@
+/*MAIN*/
+.carousel {
+    width: 97.50vw;
+    margin-top: 0px;
+}
+.carousel-inner {
+    margin: 0px 30px 0px;
+    width: 85vw;
+}
+.carousel-item {
+    width: 85vw;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    position: relative;
+    left: 45px;
+}
+.carousel-item img {
+    width: 90px;
+    height: 135px;
+}
+.carousel-control-prev {
+    margin-left: 0vw;
+    width: fit-content;
+}
+.carousel-control-next {
+    margin-right: 0vw;
+    width: fit-content;
+}
+#add-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 0px 10px;
+}
+#add-buttons button {
+    all: unset;
+    background: linear-gradient(to top right, rgb(1, 59, 121) 0%, blue 30%, rgb(0, 157, 255) 60%, aqua 90%);
+    border-radius: 7%;
+    text-align: center;
+    color: white;
+}
+.c-carousel {
+    margin-top: 40px;
+    width: 97.50vw;
+    height: 194px;
+    position: relative;
+    left: 0px;
+}
+.c-carousel img {
+    width: 90px;
+    height: 135px;
+    margin: 0px 5px 3px;
+}
+.slide-next, .slide-prev {
+    all: unset;
+    font-size: 2.5em;
+    position: absolute;
+    top: 25%;
+    opacity: .6;
+}
+.slide-prev {
+    left: 0px;
+    margin-left: 0vw;
+    width: fit-content;
+}
+.slide-next {
+    right: 0px;
+    margin-left: 0vw;
+    width: fit-content;
+}
+.c-carousel-inner {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: fit-content;
+    visibility: hidden;
+    left: 200vw;
+    transition: left 1000ms;
+}
+.slide-state {
+    position: relative;
+    left: 41vw;
+    bottom: -139px;
+    opacity: .5;
+    width: fit-content;
+    transition: opacity 50ms ease-in;
+}
+.slide-state button {
+    all: unset;
+    font-size: 2.3em;
+    cursor: pointer;
+}
+
+/*ANIMATED*/
+.c-activated {
+    visibility: visible;
+    left: 27vw;
+    transition: left 1500ms;
+}
+.left-inner {
+    left: -200vw;
+    visibility: visible;
+    transition: left 1500ms;
+}
+.right-inner {
+    left: 200vw;
+    visibility: visible;
+    transition: left 1500ms;
+}
+.s-activated {
+    opacity: .6;
+}
