@@ -1,0 +1,73 @@
+/*MAIN*/
+main h1 {
+    padding-top: 10px;
+    justify-self: center;
+}
+.chat{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    height: 160px;
+}
+.chat img {
+    margin-left: 20px;
+    padding: 3px;
+    width: 70%;
+    border-radius: 50%;
+    outline: 3px solid rgb(1, 250, 1);
+}
+.chat div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+.chat-butt.del-opt {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 10px;
+    font-size: 1.5em;
+}
+.chat-butt.del-opt button {
+    all: unset;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.chat-opt {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 55%;
+    border: 1px solid black;
+    background-color: #f0efef;
+    list-style: none;
+}
+.chat-opt button {
+    all: unset;
+    width: 100%;
+    margin: 2px 0px 0px;
+}
+.chat-opt button:hover {
+    background-color: blue;
+    color: white;
+}
+.chat hr {
+    position: absolute;
+    margin: 0px;
+    width: 100%;
+    bottom: 0px;
+}
+
+/*ANIMAZIONI*/
+.show {
+    display: block;
+}
+
+/*RESPONSIVE*/
+@media screen and (max-width: 590px) {
+    .chat-butt.del-opt button.desktop {
+        display: none;
+    }
+    
+}
