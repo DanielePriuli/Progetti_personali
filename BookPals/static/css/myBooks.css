@@ -96,18 +96,21 @@
 .c-activated {
     visibility: visible;
     left: 27vw;
-    transition: left 1500ms;
+    transition: left 1000ms;
 }
 .left-inner {
     left: -200vw;
     visibility: visible;
-    transition: left 1500ms;
+    transition: left 1000ms;
 }
 .right-inner {
     left: 200vw;
     visibility: visible;
-    transition: left 1500ms;
+    transition: left 1000ms;
 }
 .s-activated {
     opacity: .6;
+}
+.hide {
+    visibility: hidden;
 }
