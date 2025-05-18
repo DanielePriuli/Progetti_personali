@@ -7,14 +7,17 @@ function nextSlide() {
         const inner = carouselInners[i];
         if (inner.classList.length==3 && inner.classList[2]=="c-activated") {
            inner.classList.add("left-inner");
+           slideStates[i].classList.remove("s-activated");
            setTimeout(() => {
                 inner.classList.remove("c-activated");
            }, 1000);
            if (i==carouselInners.length-1) {
                 carouselInners[0].classList.add("c-activated");
+                slideStates[0].classList.add("s-activated");
                 carouselInners[1].classList.remove("left-inner");
            } else {
                 carouselInners[i+1].classList.add("c-activated");
+                slideStates[i+1].classList.add("s-activated");
                 carouselInners[(i==0)? i+2:0].classList.remove("left-inner");
            }
            break;
@@ -26,6 +29,7 @@ function prevSlide() {
         const inner = carouselInners[i];
         if (inner.classList.length==3 && inner.classList[2]=="c-activated") {
                inner.classList.add("right-inner");
+               slideStates[i].classList.remove("s-activated");
                setTimeout(() => {
                inner.classList.remove("left-inner")
                inner.classList.remove("c-activated");
@@ -34,6 +38,7 @@ function prevSlide() {
            if (i==0) {
                carouselInners[2].classList.remove("left-inner");
                carouselInners[2].classList.add("c-activated");
+               slideStates[2].classList.add("s-activated");
                carouselInners[1].classList.remove("right-inner");
                carouselInners[1].classList.add("hide");
                carouselInners[1].classList.add("left-inner");
@@ -43,6 +48,7 @@ function prevSlide() {
            } else {
                carouselInners[i-1].classList.remove("left-inner");
                carouselInners[i-1].classList.add("c-activated");
+               slideStates[i-1].classList.add("s-activated");
                carouselInners[(i==2)? i-2:2].classList.remove("right-inner");
                carouselInners[(i==2)? i-2:2].classList.add("hide");
                carouselInners[(i==2)? i-2:2].classList.add("left-inner");
